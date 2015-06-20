@@ -1,10 +1,10 @@
 -- the ground's default material
-minetest.register_node("plom:stone", {
+minetest.register_node("plom_minimal:stone", {
 	tiles = {"stone.png"},
 })
 
 -- workaround for https://github.com/minetest/minetest/issues/1840
-minetest.register_alias("mapgen_water_source", "plom:stone")
+minetest.register_alias("mapgen_water_source", "plom_minimal:stone")
 
 -- generate map made out of air only
 minetest.register_on_mapgen_init(function()
@@ -21,7 +21,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
             local vi = area:index(minp.x, y, z)
 	    for x = minp.x, maxp.x do
                 if y <= -1 then
-                    data[vi] = "plom:stone"
+                    data[vi] = "plom_minimal:stone"
                 end
 		vi = vi + 1
             end
