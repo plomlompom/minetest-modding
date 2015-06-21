@@ -1,6 +1,6 @@
 -- the ground's default material
 minetest.register_node("plom_minimal:stone", {
-	tiles = {"stone.png"},
+    tiles = {"stone.png"}
 })
 
 -- workaround for https://github.com/minetest/minetest/issues/1840
