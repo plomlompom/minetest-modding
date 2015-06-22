@@ -21,7 +21,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
             local vi = area:index(minp.x, y, z)
 	    for x = minp.x, maxp.x do
                 if y <= -1 then
-                    data[vi] = "plom_minimal:stone"
+                    data[vi] = minetest.get_content_id("plom_minimal:stone")
                 end
 		vi = vi + 1
             end
